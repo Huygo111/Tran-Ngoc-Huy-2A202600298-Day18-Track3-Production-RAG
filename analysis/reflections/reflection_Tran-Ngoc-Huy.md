@@ -1,6 +1,6 @@
 # Individual Reflection — Lab 18
 
-**Tên:** Trần Ngọc Huy  
+**Tên:** Trần Ngọc Huy - 2A202600298
 **Module phụ trách:** M1, M2, M3, M4, M5 (Làm solo)
 
 ---

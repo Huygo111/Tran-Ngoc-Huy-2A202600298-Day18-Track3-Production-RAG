@@ -1,8 +1,7 @@
 # Group Report — Lab 18: Production RAG
 
-**Nhóm:** Solo (Trần Ngọc Huy)  
+**Nhóm:** Solo (Trần Ngọc Huy) - 2A202600298
 **Ngày:** 2026-05-04
-
 ## Thành viên & Phân công
 
 | Tên | Module | Hoàn thành | Tests pass |
