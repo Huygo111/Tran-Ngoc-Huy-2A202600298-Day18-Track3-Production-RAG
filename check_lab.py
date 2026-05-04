@@ -1,8 +1,8 @@
 """
-Kiểm tra định dạng bài nộp trước khi submit.
-Chạy: python check_lab.py
+Check submission format before submitting.
+Run: python check_lab.py
 
-⚠️ Lỗi định dạng khiến script chấm tự động không chạy → trừ 5 điểm thủ tục.
+[!] Format errors may prevent automated grading.
 """
 
 import json
@@ -13,13 +13,13 @@ import subprocess
 
 def check_file(path: str, required: bool = True) -> bool:
     if os.path.exists(path):
-        print(f"  ✅ {path}")
+        print(f"  [v] {path}")
         return True
     elif required:
-        print(f"  ❌ THIẾU: {path}")
+        print(f"  [x] MISSING: {path}")
         return False
     else:
-        print(f"  ⚠️  Optional: {path}")
+        print(f"  [!] Optional: {path}")
         return True
 
 
@@ -29,12 +29,12 @@ def check_json(path: str, required_keys: list[str]) -> bool:
             data = json.load(f)
         missing = [k for k in required_keys if k not in data]
         if missing:
-            print(f"  ❌ {path} thiếu keys: {missing}")
+            print(f"  [x] {path} missing keys: {missing}")
             return False
-        print(f"  ✅ {path} — keys OK")
+        print(f"  [v] {path} -- keys OK")
         return True
     except (json.JSONDecodeError, FileNotFoundError) as e:
-        print(f"  ❌ {path} — {e}")
+        print(f"  [x] {path} -- {e}")
         return False
 
 
@@ -71,23 +71,23 @@ def run_tests() -> tuple[int, int]:
                 total += int(part.split()[0])
         return passed, total
     except Exception as e:
-        print(f"  ⚠️  pytest error: {e}")
+        print(f"  [!] pytest error: {e}")
         return 0, 0
 
 
 def validate():
-    print("🔍 Kiểm tra bài nộp Lab 18: Production RAG\n")
+    print("Checking Lab 18 submission: Production RAG\n")
     errors = 0
 
     # 1. Source files
-    print("📁 Source code:")
+    print("Source code:")
     for f in ["src/m1_chunking.py", "src/m2_search.py", "src/m3_rerank.py",
               "src/m4_eval.py", "src/pipeline.py"]:
         if not check_file(f):
             errors += 1
 
     # 2. Reports
-    print("\n📊 Reports:")
+    print("\nReports:")
     if check_file("reports/ragas_report.json"):
         if not check_json("reports/ragas_report.json", ["aggregate", "num_questions"]):
             errors += 1
@@ -96,45 +96,45 @@ def validate():
     check_file("reports/naive_baseline_report.json", required=False)
 
     # 3. Analysis
-    print("\n📝 Analysis:")
+    print("\nAnalysis:")
     check_file("analysis/failure_analysis.md")
     check_file("analysis/group_report.md")
 
     # 4. Individual reflections
-    print("\n👤 Individual reflections:")
+    print("\nIndividual reflections:")
     reflections = []
     ref_dir = "analysis/reflections"
     if os.path.isdir(ref_dir):
         reflections = [f for f in os.listdir(ref_dir) if f.startswith("reflection_") and f.endswith(".md")]
     if reflections:
         for r in reflections:
-            print(f"  ✅ {ref_dir}/{r}")
+            print(f"  [v] {ref_dir}/{r}")
     else:
-        print(f"  ⚠️  Chưa có file reflection cá nhân trong {ref_dir}/")
+        print(f"  [!] No individual reflection file in {ref_dir}/")
 
     # 5. TODO count
-    print("\n🔧 TODO markers:")
+    print("\nTODO markers:")
     todo_count = check_todos()
     if todo_count == 0:
-        print("  ✅ Không còn TODO nào")
+        print("  [v] No TODOs remaining")
     else:
-        print(f"  ⚠️  Còn {todo_count} TODO chưa implement")
+        print(f"  [!] {todo_count} TODOs remaining")
 
     # 6. Tests
-    print("\n🧪 Auto-tests:")
+    print("\nAuto-tests:")
     passed, total = run_tests()
     if total > 0:
         pct = passed / total * 100
-        print(f"  {'✅' if pct >= 80 else '⚠️'} {passed}/{total} tests passed ({pct:.0f}%)")
+        print(f"  {'[v]' if pct >= 80 else '[!]'} {passed}/{total} tests passed ({pct:.0f}%)")
     else:
-        print("  ⚠️  Không chạy được tests")
+        print("  [!] Could not run tests")
 
     # 7. Summary
     print("\n" + "=" * 50)
     if errors == 0:
-        print("🚀 Bài lab sẵn sàng để nộp!")
+        print("READY TO SUBMIT!")
     else:
-        print(f"❌ Có {errors} lỗi. Sửa trước khi nộp.")
+        print(f"FAILED: {errors} errors. Fix before submitting.")
     print("=" * 50)
 
 

@@ -1,3 +1,22 @@
 [
-  {"question": "hihi cả nhà tự tạo testset bằng cơm nhé", "ground_truth": "Không kịp tạo luôn"},
+  {"question": "Nhân viên chính thức được nghỉ phép năm bao nhiêu ngày?", "ground_truth": "Nhân viên chính thức được nghỉ phép năm 12 ngày làm việc mỗi năm."},
+  {"question": "Ngày nghỉ phép không dùng hết có thể chuyển sang năm sau tối đa bao nhiêu ngày?", "ground_truth": "Ngày nghỉ phép không sử dụng có thể chuyển sang năm tiếp theo tối đa 5 ngày."},
+  {"question": "Thâm niên công tác ảnh hưởng thế nào đến số ngày nghỉ phép?", "ground_truth": "Số ngày nghỉ phép tăng thêm 1 ngày cho mỗi 5 năm thâm niên công tác."},
+  {"question": "Nghỉ phép không lương tối đa bao nhiêu ngày mỗi năm?", "ground_truth": "Nhân viên có thể xin nghỉ phép không lương tối đa 30 ngày mỗi năm."},
+  {"question": "Ai phải phê duyệt đơn xin nghỉ phép không lương?", "ground_truth": "Đơn xin nghỉ phải được Giám đốc bộ phận và Phòng Nhân sự phê duyệt."},
+  {"question": "Mật khẩu phải thay đổi sau bao nhiêu ngày?", "ground_truth": "Mật khẩu phải thay đổi mỗi 90 ngày."},
+  {"question": "Yêu cầu độ phức tạp tối thiểu của mật khẩu là gì?", "ground_truth": "Mật khẩu phải có ít nhất 12 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt."},
+  {"question": "Nhân viên làm việc từ xa cần làm gì trước khi truy cập hệ thống nội bộ?", "ground_truth": "Nhân viên làm việc từ xa phải kết nối VPN trước khi truy cập hệ thống nội bộ."},
+  {"question": "Thời gian thử việc của nhân viên chính thức là bao lâu?", "ground_truth": "Thời gian thử việc là 60 ngày đối với nhân viên chính thức."},
+  {"question": "Trong thời gian thử việc, nhân viên nhận bao nhiêu phần trăm lương?", "ground_truth": "Trong thời gian thử việc, nhân viên nhận 85% mức lương đã thỏa thuận."},
+  {"question": "Quyền được lãng quên trong Nghị định 13/2023 là gì?", "ground_truth": "Chủ thể dữ liệu có quyền xóa dữ liệu cá nhân của mình, còn gọi là quyền được lãng quên."},
+  {"question": "Im lặng có được coi là đồng ý xử lý dữ liệu cá nhân không?", "ground_truth": "Im lặng hoặc không phản hồi không được coi là sự đồng ý."},
+  {"question": "Tổ chức phải thông báo vi phạm dữ liệu trong bao nhiêu giờ?", "ground_truth": "Bên kiểm soát dữ liệu phải thông báo vi phạm cho Cục An toàn thông tin trong vòng 72 giờ kể từ khi phát hiện."},
+  {"question": "DPO là gì theo Nghị định 13/2023?", "ground_truth": "DPO là nhân sự chuyên trách bảo vệ dữ liệu mà tổ chức xử lý dữ liệu phải bổ nhiệm theo quy định."},
+  {"question": "Mức phạt tối đa khi vi phạm quy định bảo vệ dữ liệu cá nhân là bao nhiêu?", "ground_truth": "Trường hợp vi phạm nghiêm trọng có thể bị phạt đến 5% doanh thu tại Việt Nam trong năm tài chính."},
+  {"question": "Mua sắm trên 200 triệu đồng cần ai phê duyệt?", "ground_truth": "Mua sắm trên 200 triệu đồng cần CEO và Hội đồng quản trị phê duyệt."},
+  {"question": "Mua sắm trên bao nhiêu tiền thì phải lấy ít nhất 3 báo giá?", "ground_truth": "Mua sắm trên 100 triệu đồng phải thực hiện qua quy trình lấy ít nhất 3 báo giá từ 3 nhà cung cấp khác nhau."},
+  {"question": "Phụ cấp ăn uống công tác tại Hà Nội là bao nhiêu mỗi ngày?", "ground_truth": "Phụ cấp ăn uống 300.000 đồng mỗi ngày cho công tác tại Hà Nội và TP. Hồ Chí Minh."},
+  {"question": "Nhân viên phải nộp chứng từ hoàn ứng sau công tác trong bao nhiêu ngày?", "ground_truth": "Toàn bộ chứng từ hoàn ứng phải được nộp trong vòng 5 ngày làm việc sau khi kết thúc công tác."},
+  {"question": "Quà tặng khách hàng tối đa bao nhiêu tiền mỗi người?", "ground_truth": "Quà tặng khách hàng và đối tác tối đa 500.000 đồng mỗi người mỗi dịp."}
 ]

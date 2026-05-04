@@ -1,0 +1,5 @@
+[project]
+name = "tran-ngoc-huy-2a202600298-day18-track3-production-rag"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
